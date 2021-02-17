@@ -341,7 +341,7 @@ class Filter_Manager {
             $('.overlay').fadeIn(500)
             $("iframe").attr("src","")
             // hide spinner
-             $('.iframe_spinner').hide();
+             $('#iframe_spinner').hide();
 
           }
 
@@ -415,7 +415,7 @@ class Filter_Manager {
         //only fade in 2nd time
 
         if ($('#frame').attr("src")!="") {
-             $('.iframe_spinner').show();
+             $('#iframe_spinner').show();
             $.when($('.overlay').fadeIn(500)).done(function() {
                obj.show_page(match)
             });
