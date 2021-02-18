@@ -1,4 +1,4 @@
-# cwrUSA_maps - Crop Wild Relatives of the United States of America
+# Distributions and conservation status of crop wild relatives of the United States
 Storage and visualization of species level summary documentation from the paper ["Crop wild relatives of the United States require urgent conservation action"](https://www.pnas.org/content/117/52/33351)
 
 ## Data Availability
