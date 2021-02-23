@@ -19,7 +19,8 @@ A system to search through the collection was made possible using the add_html_p
 If new analysis files replace old ones, running this script will update the CSV document powering the website search.
 To execute this file it might help to run it from a virtual environment so the dependencies are available.  
 Setting-up the virtual environment can be done from the terminal on osx and linux with the following commands:
-```python3 -m venv env
+```
+python3 -m venv env
 source venv/bin/activate
 python3 -m pip install -r requirements.txt
 # and to run the update script use
@@ -34,3 +35,6 @@ To run a local server from the terminal on osx and linux use:
 python -m http.server 8000
 ```
 Then navigate to http://localhost:8000/ from your web browser
+
+# Online viewing
+To view a working example of the website go to https://dcarver1.github.io/cwrUSA_maps/
