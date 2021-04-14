@@ -20,7 +20,7 @@ If new analysis files replace old ones, running this script will update the CSV 
 To execute this file it might help to run it from a virtual environment so the dependencies are available.  
 Setting-up the virtual environment can be done from the terminal on osx and linux with the following commands:
 ```
-python3 -m venv env
+python3 -m venv venv
 source venv/bin/activate
 python3 -m pip install -r requirements.txt
 # and to run the update script use

@@ -4,7 +4,7 @@ var filter_manager;
 $( function() {
 
     filter_manager = new Filter_Manager({
-    csv:"./allMetricData2020-03-20_forfigsonly.csv",
+    csv:"./allMetricData2021-04-12_forfigsonly.csv",
      omit_result_item:["file_path","id"], // define which attributes not to show when a selection is made
      omit_filter_item:["Taxon","file_path","id"],
      path_col:"file_path",
@@ -49,4 +49,3 @@ $( function() {
     $( window ).trigger("resize")
 
 });
-

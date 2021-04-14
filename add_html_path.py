@@ -4,7 +4,7 @@ import pandas as pd
 import glob
 
 # the location of the source data
-CSV_FILE="allMetricData2020-03-20_forfigsonly.csv"
+CSV_FILE="allMetricData2021-04-12_forfigsonly.csv"
 # path and regular expression
 PATH = "./compiledSummaryDocs/"
 MATCH="*/*.html"
@@ -20,7 +20,7 @@ used to generate a list of html paths
     '''
     # get a list of files to match against
     file_list = get_file_list(path+match)
-    # print(file_list)
+    print(file_list)
 
     # open the csv
     csv_data = get_csv(csv_file_name)
@@ -34,6 +34,7 @@ used to generate a list of html paths
             # looking for match_text in file_name
             if file_name.startswith(match_text):
                 # save the file path to the row
+                print(file_name)
                 csv_data.loc[index, path_col] = file_name
 
     # update original csv
@@ -50,8 +51,7 @@ def get_csv(file_name):
     :param file_name: the csv file to open
     :return: csv_reader for file
     '''
-    file_data = pd.read_csv(file_name)
-
+    file_data = pd.read_csv(file_name, encoding='windows-1252')
     return file_data
 
 
@@ -61,8 +61,8 @@ def get_file_list(path_match):
     :return: a list of files with extension
     '''
     # takes a file path and generates a list of the files
-
-    return glob.glob(path_match)
+    res = glob.glob(path_match)
+    return [sub.replace('\\', '/') for sub in res]
 
 
 # step 2.
